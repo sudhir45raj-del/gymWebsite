@@ -30,7 +30,7 @@ cards.forEach(card =>{
 function validate(){
     const email = document.getElementById('email')
     if(email.value.trim() === "" 
-     || !/^[a-zA-Z0-9]+@[a-zA-Z]+**\\.**[a-zA-Z]+$/.test(email.value)){
+     || !/^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]+$/.test(email.value)){
         alert("Make sure the email field is filled");
         return false;
     }
@@ -66,6 +66,3 @@ function validatcont(){
             })
         } 
     })
-    // const username = "sudhir@gmail.com"
-    // const result = /^[a-zA-Z0-9]+@[a-zA-Z]+.[a-zA-Z]+$/.test(username)
-    // console.log(result)

@@ -97,9 +97,7 @@ body {
     margin-top: 20px;
     font-size: 20px;
     font-weight: 100;
-
 }
-
 .join-button {
     padding: 10px 30px;
     background-color: #b62424;
@@ -109,6 +107,11 @@ body {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    transition: background 120ms ease, transform 180ms ease;
+}
+.join-button:hover{
+    background-color: #cf1111;
+    transform: translateY(-2px);
 }
 
 .section2-content {
@@ -592,8 +595,13 @@ body {
     font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: background 180ms ease, transfrom 180ms ease;
 }
 
+.get-startbtn:hover{
+    background-color: #921a0d;
+    transform: translateY(-2px);
+}
 .sec5p2b .get-startbtn {
     width: 100%;
     background-color: #b62424;
@@ -602,6 +610,9 @@ body {
     color: white;
     font-weight: 600;
     border: none;
+}
+.sec5p2b .get-startbtn:hover{
+    background-color: #921a0d;
 }
 
 .sec5p2b .sec5p2box {
@@ -705,14 +716,27 @@ body {
     border-radius: 20px;
     border: none;
     padding: 10px 32px;
+    cursor: pointer;
 } 
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around;
+    gap: 7px;
+}
+#contactbtn{
+    width: 13%;
+}
 .sec6frm input {
     color: rgb(255, 251, 251);
     background-color: rgb(23, 77, 23);
     padding: 10px 32px;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
+    
 }
 
 .sec6p2 {
@@ -768,7 +792,38 @@ body {
 .sec6p2txt p {
     font-size: 24px;
 }
+.boxfaq{
+    display: flex;
+    margin-top: 60px;
+    width: 100%;
+    justify-content: center;
 
+}
+.faqs{
+background-color: #f7f7f7;
+    padding: 59px;
+    border-radius: 20px;
+}
+.tgl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.faqtgl{
+    width: 46px;
+    cursor: pointer;
+}
+.faqtgl.tg{
+transform: rotate(180deg);
+}
+.answer.hiddenfa{
+    display: none;
+}
+.retgl{
+    width: 46px;
+    cursor: pointer;
+}
 .sec7 {
     width: 100%;
     background-color: #ffe5e5;
@@ -1468,7 +1523,15 @@ body {
     .sec6p1txt h1 {
         font-size: 12px;
     }
-
+    .submitbtn{
+        padding: 2px 4px;
+        font-size: 10px;
+    }
+    .sec6frm input{
+        padding: 3px;
+        font-size: 10px;
+        
+    }
     .sec6p1txt h1 .small-text {
         font-size: 12px;
     }
@@ -1537,13 +1600,11 @@ body {
         font-size: 14px;
     }
 
-    .sec7p2a {
-        .logo {
+    .sec7p2a .logo {
             font-size: 22px;
             width: 0;
         }
     }
-
     @media(max-width:594px) {
         .sec7p2a p {
             font-size: 11px;
