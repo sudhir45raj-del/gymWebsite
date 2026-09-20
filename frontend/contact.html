@@ -18,9 +18,19 @@
     </nav>
     </header>
     <main>
-        <h1>Contact Us</h1>
-        <p>Welcome to our gym! We are dedicated to helping you achieve your fitness goals.</p>
+        <div class="container">
+            <h1>contact Us</h1>
+            <form class="contact">
+                <label for="fname">First name</label>
+                <input type="text" name="firstName" id="firstName">
+                <label for="lname">Last name</label>
+                <input type="text" name="lastName" id="lastName">
+                <label for="mob.number"> mob.number</label>
+                <input type="tel" name="tel" id="tel">
+                <input id="contactbtn" type="submit" value="submit" onclick="validatcont()">
+            </form>
+        </div>
     </main>
-
+    <script src="script.js"></script>
 </body>
 </html>

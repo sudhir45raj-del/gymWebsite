@@ -7,40 +7,39 @@ body {
     padding: 0;
 }
 
-.navbar ul {
-    margin: 0;
-    padding: 0;
+.navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    justify-content: space-around;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 .navbar ul {
-    display: flex;
-    justify-content: center;
-    gap: 90px;
     align-items: center;
     list-style: none;
-    border: 2px solid #7c0101;
-    /* width: 94%; */
     border-radius: 10px;
-    background-color: #000000;
-    color: #ffe5e5;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
 }
-
 .navbar ul li a {
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
     font-weight: 700;
-    transition: all 0.3s ease-in-out;
 }
+.navbar img{
+    width: 0;
+    background-color: white;
+    cursor: pointer;
+    }
 
-.logo {
-    width: 140px;
+.nlogo {
     height: auto;
     border-radius: 100%;
     text-align: center;
@@ -531,7 +530,6 @@ body {
     justify-content: center;
     gap: 12px;
 }
-
 .sec5p2a {
     width: 23%;
     background-color: #ffe5e5;
@@ -682,6 +680,9 @@ body {
     color: white;
     border: 1px solid white;
 }
+.sec6p1btn .btn2 {
+    border: none;
+}
 
 .sec6p1txt {
     font-size: 26px;
@@ -698,6 +699,13 @@ body {
 .sec6frm {
     border-radius: 20px;
 }
+.submitbtn {
+    background-color: rgb(23, 77, 23);
+    color: rgb(178 141 141);
+    border-radius: 20px;
+    border: none;
+    padding: 10px 32px;
+} 
 
 .sec6frm input {
     color: rgb(255, 251, 251);
@@ -795,10 +803,6 @@ body {
     font-size: 44px;
 }
 
-.sec7p1b {
-    /* width: 50%; */
-}
-
 .sec7p1b h2 {
     font-size: 18px;
 }
@@ -885,6 +889,61 @@ body {
     display: flex;
     justify-content: space-between;
     font-size: 12px;
+}
+    
+@media(max-width:425px){
+    .imagegym {
+        position: relative;
+    }
+    .nav-links.hidden {
+     display: none;
+    }
+    /* CSS */
+.sec5p2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Flex order brings active card to top */
+.active-top {
+  order: -1; 
+  border: 2px solid #007bff; /* Optional visual highlight */
+}
+    .navbar{
+        position: absolute;
+        z-index: 10;
+         width: 47%;
+        right: 0%;
+        opacity: 0.9;
+    }
+    .nlogo.sm{
+        font-size: 4px;
+    }
+     .navbar.hamAdjst {
+        height: 23px;
+        width: 100%;
+    }
+    .navbar img{
+    width: 20px;
+    position: absolute;
+    top: 5%;
+    right: 14%;
+}
+    .navbar ul {
+        position: relative;
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }    
+    .navbar .logo {
+        margin-right: 10px;
+        font-size: 10px;
+        position: absolute;
+        top: 0;
+        left: 7px;
+    }
 }
 
 @media(max-width:835px) {
