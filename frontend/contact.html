@@ -3,31 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact | IronCore Fitness</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-    <nav class ="navbar">
-        <ul>
-            <h1 class="logo">Strenth</h1>
+    <nav class="navbar">
+        <div class="nlogo">
+            <h1>IronCore Fitness</h1>
+        </div>
+        <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
+        <img class="hambgr" src="images/navhambgr.png" alt="">
+        <img class="crosham" src="images/crossham.png" alt="">
     </nav>
     </header>
     <main>
         <div class="container">
-            <h1>contact Us</h1>
-            <form class="contact">
-                <label for="fname">First name</label>
-                <input type="text" name="firstName" id="firstName">
-                <label for="lname">Last name</label>
-                <input type="text" name="lastName" id="lastName">
-                <label for="mob.number"> mob.number</label>
-                <input type="tel" name="tel" id="tel">
-                <input id="contactbtn" type="submit" value="submit" onclick="validatcont()">
+            <h1>Contact IronCore Fitness</h1>
+            <p>This is a fictional gym website created for portfolio demonstration. The contact form is a demo and will open a WhatsApp message draft; it does not send automatically.</p>
+            <p><strong>Sample location:</strong> Sample Road, Indiranagar, Bengaluru, Karnataka (fictional)</p>
+            <p><strong>Sample phone:</strong> +91 90000 00000 (placeholder only)</p>
+            <form class="contact" id="contactForm">
+                <label for="firstName">First name</label>
+                <input type="text" name="firstName" id="firstName" required>
+                <label for="lastName">Last name</label>
+                <input type="text" name="lastName" id="lastName" required>
+                <label for="tel">Mobile number</label>
+                <input type="tel" name="tel" id="tel" inputmode="numeric" maxlength="10" placeholder="10-digit mobile number" required>
+                <label for="plan">Membership interest</label>
+                <select id="plan" name="plan">
+                    <option value="">Select a plan (optional)</option>
+                    <option value="Basic">Basic — ₹999/month</option>
+                    <option value="Pro">Pro — ₹1,499/month</option>
+                    <option value="Elite">Elite — ₹2,499/month</option>
+                </select>
+                <label for="message">Message (optional)</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us what you would like to know"></textarea>
+                <button id="contactbtn" type="submit">Prepare WhatsApp inquiry</button>
             </form>
         </div>
     </main>

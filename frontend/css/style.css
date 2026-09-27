@@ -44,6 +44,9 @@ body {
     border-radius: 100%;
     text-align: center;
 }
+.nlogo h1{
+    font-size: 18px;
+}
 
 .container {
     width: 100%;
@@ -965,12 +968,16 @@ transform: rotate(180deg);
   order: -1; 
   border: 2px solid #007bff; /* Optional visual highlight */
 }
+.text-gym h2{
+    font-size: 23px;
+}
     .navbar{
         position: absolute;
         z-index: 10;
          width: 47%;
         right: 0%;
         opacity: 0.9;
+        top: 0;
     }
     .nlogo.sm{
         font-size: 4px;

@@ -41,16 +41,16 @@ function validatcont(){
     const lastName = document.getElementById('lastName');
     const number = document.getElementById('tel');
     if(firstName.value.trim() === ""){
-        alert("make sure you enter your name");
+        alert("Please enter your first name.");
         return false;
     }
     if(lastName.value.trim() === ""){
-        alert("make sure you enter your name");
+        alert("Please enter your last name.");
         return false;
     }
         if(number.value.trim() === "" || !/^\d{10}$/.test(number.value)){
-            console.log("enter mobile number")
-            alert("make sure you enter your mobile number");
+            console.log("Please enter a valid 10-digit mobile number.")
+            alert("Please enter a valid 10-digit mobile number.");
             return false;
         }
     return true;
@@ -66,3 +66,45 @@ function validatcont(){
             })
         } 
     })
+
+// Contact page demo: validate details and open a prefilled WhatsApp draft.
+// Replace this placeholder number with the real gym's WhatsApp number before launch.
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+    const planField = document.getElementById("plan");
+    const messageField = document.getElementById("message");
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedPlan = params.get("plan");
+    if (selectedPlan && planField) {
+        const matchingOption = Array.from(planField.options).find(
+            option => option.value.toLowerCase() === selectedPlan.toLowerCase()
+        );
+        if (matchingOption) planField.value = matchingOption.value;
+    }
+
+    contactForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!validatcont()) return;
+
+        const firstName = document.getElementById("firstName").value.trim();
+        const lastName = document.getElementById("lastName").value.trim();
+        const phone = document.getElementById("tel").value.trim();
+        const plan = planField ? planField.value : "";
+        const message = messageField ? messageField.value.trim() : "";
+
+        const text = [
+            "Hello IronCore Fitness, I would like to make an inquiry.",
+            `Name: ${firstName} ${lastName}`,
+            `Phone: ${phone}`,
+            plan ? `Membership interest: ${plan}` : "",
+            message ? `Message: ${message}` : ""
+        ].filter(Boolean).join("\n");
+
+        // Demo placeholder. Replace with the real gym's WhatsApp number (country code + number, digits only).
+        const whatsappNumber = "919000000000";
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    });
+}
